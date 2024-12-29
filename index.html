@@ -6,6 +6,13 @@
     <title>Mishuk-Travel</title>
     <!-- tailwindcss setup -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI setup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
     <!-- tailwindcss custom config  -->
     <script>
       tailwind.config = {
@@ -39,7 +46,7 @@
       }
     </style>
   </head>
-  <body class="mulish">
+  <body class="mulish bg-white m-5 lg:m-0">
     <!-- header section starts -->
     <header class="container mx-auto my-12">
       <nav class="flex justify-between items-center">
@@ -52,7 +59,52 @@
         </div>
         <!-- logo section ends -->
         <!-- menu section starts -->
-        <div>
+        <!-- responsive menu starts -->
+        <div class="dropdown dropdown-end">
+          <!-- responsive menu starts -->
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-square btn-ghost text-primary-text-color lg:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block h-6 w-6 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow gap-10"
+          >
+            <li class="text-primary-color font-bold text-lg">
+              <a href="#">Home</a>
+            </li>
+            <li class="text-nav-text-color font-bold text-lg">
+              <a href="#">Packages</a>
+            </li>
+            <li class="text-nav-text-color font-bold text-lg">
+              <a href="#">Testimonial</a>
+            </li>
+            <li class="text-nav-text-color font-bold text-lg">
+              <a href="#">Blog</a>
+            </li>
+            <li class="text-nav-text-color font-bold text-lg">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- responsive menu ends -->
+        <div class="hidden lg:block">
+          <!-- large device menu starts -->
           <ul class="flex gap-11">
             <li class="text-primary-color font-bold text-lg">
               <a href="#">Home</a>
@@ -71,6 +123,7 @@
             </li>
           </ul>
         </div>
+        <!-- large device menu ends -->
         <!-- menu section ends -->
       </nav>
     </header>
